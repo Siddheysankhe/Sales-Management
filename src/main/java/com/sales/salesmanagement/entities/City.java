@@ -12,13 +12,12 @@ public class City {
 
     private String name;
 
-    @Embedded
-    private State state;
+    private String stateName;
 
-    public City(Integer id, String name, State state) {
+    public City(Integer id, String name, String stateName) {
         this.id = id;
         this.name = name;
-        this.state = state;
+        this.stateName = stateName;
     }
 
     public Integer getId() {
@@ -37,11 +36,11 @@ public class City {
         this.name = name;
     }
 
-    public State getState() {
-        return state;
+    public String getStateName() {
+        return stateName;
     }
 
-    public void setState(State state) {
-        this.state = state;
+    public void setStateName(String stateName) {
+        this.stateName = stateName;
     }
 }
